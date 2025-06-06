@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+  # Atlassian MCP Server
+  mcp-atlassian:
+    image: ghcr.io/modelcontextprotocol/server-atlassian:latest
+    container_name: mcp-atlassian
+    environment:
+      - ATLASSIAN_API_TOKEN=${ATLASSIAN_API_TOKEN}
+      - JIRA_BASE_URL=${JIRA_BASE_URL}
+      - JIRA_DEFAULT_PROJECT=${JIRA_DEFAULT_PROJECT}
+      - NODE_ENV=production
+    ports:
+      - "3001:3001"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Slack MCP Server (Future)
+  mcp-slack:
+    image: ghcr.io/modelcontextprotocol/server-slack:latest
+    container_name: mcp-slack
+    environment:
+      - SLACK_BOT_TOKEN=${SLACK_BOT_TOKEN}
+      - SLACK_APP_TOKEN=${SLACK_APP_TOKEN}
+      - SLACK_SIGNING_SECRET=${SLACK_SIGNING_SECRET}
+    ports:
+      - "3002:3002"
+    restart: unless-stopped
+    profiles:
+      - slack
+
+  # GitHub MCP Server (Future)
+  mcp-github:
+    image: ghcr.io/modelcontextprotocol/server-github:latest
+    container_name: mcp-github
+    environment:
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+      - GITHUB_ORG=${GITHUB_ORG}
+    ports:
+      - "3003:3003"
+    restart: unless-stopped
+    profiles:
+      - github
+
+  # Custom Internal Tools MCP (Future)
+  mcp-internal:
+    build:
+      context: ./internal-mcp
+      dockerfile: Dockerfile
+    container_name: mcp-internal
+    environment:
+      - API_KEY=${INTERNAL_API_KEY}
+      - API_BASE_URL=${INTERNAL_API_BASE_URL}
+    ports:
+      - "3004:3004"
+    restart: unless-stopped
+    profiles:
+      - internal
+
+networks:
+  default:
+    name: mcp-network
+
+volumes:
+  mcp-data:
+    driver: local

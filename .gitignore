@@ -1,0 +1,133 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# API Keys and Secrets
+**/api-keys/
+**/secrets/
+*.key
+*.pem
+
+# Claude/AI specific
+.claude/
+*.claude.md
+!claude/CLAUDE.md  # Include the template
+
+# MCP Server configs with secrets
+mcp-servers/**/config.local.json
+mcp-servers/**/.env
+
+# IDE and Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencies
+node_modules/
+vendor/
+venv/
+.venv/
+
+# Build outputs
+dist/
+build/
+out/
+target/
+
+# Docker
+docker-compose.override.yml
+.docker/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# OS generated files
+Thumbs.db
+.Spotlight-V100
+.Trashes
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Private notes
+private/
+personal-notes/
+*.private.md
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Test coverage
+coverage/
+.coverage
+.pytest_cache/
+.nyc_output/
+
+# Documentation build
+docs/_build/
+site/
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Certificates
+*.crt
+*.csr
+*.key
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# macOS
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Desktop.ini
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.directory
+.Trash-*
+.nfs*

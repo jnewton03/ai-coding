@@ -1,0 +1,39 @@
+{
+  "name": "atlassian-mcp",
+  "description": "MCP server for Atlassian integration (JIRA, Confluence)",
+  "version": "1.0.0",
+  "connection": {
+    "type": "http",
+    "port": 3001,
+    "host": "localhost"
+  },
+  "authentication": {
+    "type": "bearer",
+    "tokenEnvVar": "ATLASSIAN_API_TOKEN"
+  },
+  "services": {
+    "jira": {
+      "enabled": true,
+      "baseUrl": "${JIRA_BASE_URL}",
+      "defaultProject": "${JIRA_DEFAULT_PROJECT}",
+      "issueTypes": ["Story", "Task", "Bug", "Epic"],
+      "customFields": {
+        "storyPoints": "customfield_10001",
+        "sprint": "customfield_10002"
+      }
+    },
+    "confluence": {
+      "enabled": false,
+      "baseUrl": "${CONFLUENCE_BASE_URL}",
+      "defaultSpace": "${CONFLUENCE_DEFAULT_SPACE}"
+    }
+  },
+  "capabilities": [
+    "create_issue",
+    "update_issue",
+    "search_issues",
+    "get_issue",
+    "add_comment",
+    "transition_issue"
+  ]
+}
