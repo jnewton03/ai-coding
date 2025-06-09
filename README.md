@@ -1,6 +1,21 @@
-# AI Tooling Journey
+# AI Configuration & Documentation
 
-This repository tracks my journey with AI tooling, documenting experiences, configurations, and best practices for various AI-powered development tools.
+## 🎯 Quick Config Usage (Primary)
+
+**Simple AI configuration management - just one command:**
+
+```bash
+# Link the simplified Claude configuration
+ln -sf ~/Personal/coding/claude/CLAUDE.md ~/.claude/CLAUDE.md
+```
+
+The `claude/CLAUDE.md` file contains 11 core principles for AI-assisted development, following the KISS principle.
+
+---
+
+## 📚 Documentation Site (Secondary)
+
+This repository also contains comprehensive documentation of an 18-month AI tooling journey, tracking experiences, configurations, and best practices for various AI-powered development tools.
 
 ## Timeline & Evolution
 
