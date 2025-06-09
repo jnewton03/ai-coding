@@ -1,92 +1,51 @@
-# AI Configuration & Documentation
+# AI Development Configs
 
-## 🎯 Quick Config Usage (Primary)
+Version-controlled configurations for AI development tools.
 
-**Simple AI configuration management - just one command:**
+## 🚀 Quick Setup
 
 ```bash
-# Link the simplified Claude configuration
-ln -sf ~/Personal/coding/claude/CLAUDE.md ~/.claude/CLAUDE.md
+# Claude configuration
+ln -sf ~/path/to/repo/claude/CLAUDE.md ~/.claude/CLAUDE.md
+
+# Cursor rules (copy to project)
+cp ~/path/to/repo/cursor/.cursorrules ./
 ```
 
-The `claude/CLAUDE.md` file contains 11 core principles for AI-assisted development, following the KISS principle.
+## 📁 Contents
 
----
+- **`claude/`** - Claude AI configurations with 11 core principles
+- **`cursor/`** - Cursor IDE rules and settings  
+- **`mcp-servers/`** - Model Context Protocol server configs
+- **`best-practices/`** - Simple development guidelines
 
-## 📚 Documentation Site (Secondary)
+## 🔗 Tool-Specific Usage
 
-This repository also contains comprehensive documentation of an 18-month AI tooling journey, tracking experiences, configurations, and best practices for various AI-powered development tools.
-
-## Timeline & Evolution
-
-### Phase 1: ChatGPT (Web UI & Mac App)
-- **Use Case**: JIRA ticket creation workflow
-- **Process**: 
-  - Provided JIRA ticket template to ChatGPT
-  - Gave user story summaries
-  - Tweaked output and copied to JIRA
-- **Plan**: Downgraded from $20/month paid plan to free tier
-
-### Phase 2: GitHub Copilot with VSCode
-- **Use Case**: Code assistance and chat mode
-- **Benefits**: 
-  - Multiple model selection options
-  - Integrated VSCode experience
-- **GitHub UI Features**:
-  - Copilot as code reviewer
-  - PR summary generation
-
-### Phase 3: Claude AI (Current)
-- **Mac App**: Replaced ChatGPT for JIRA ticket workflow
-- **Claude Code**: Game-changing CLI tool
-- **Plan**: Upgraded to $100/month MAX plan
-- **MCP Integration**: 
-  - Added Atlassian MCP server
-  - Direct JIRA ticket creation from Claude
-
-## Repository Structure
-
-```
-├── README.md                 # This file
-├── claude/                   # Claude-specific configurations
-│   ├── CLAUDE.md            # Claude instructions
-│   └── slash-commands/      # Custom slash commands
-├── cursor/                   # Cursor IDE configurations
-├── github-copilot/          # GitHub Copilot settings
-├── chatgpt/                 # ChatGPT templates
-├── mcp-servers/             # MCP server configurations
-│   ├── atlassian/          # Atlassian MCP setup
-│   └── docker/             # Local Docker MCP configs
-└── docs/                    # Best practices and guidelines
-    └── best-practices.md   # AI tooling best practices
+### Claude Configuration
+```bash
+# Link global configuration
+ln -sf ~/path/to/repo/claude/CLAUDE.md ~/.claude/CLAUDE.md
 ```
 
-## Next Steps
+### Cursor Rules
+```bash
+# Copy to project directory
+cp ~/path/to/repo/cursor/.cursorrules ./
+```
 
-1. **Local MCP Development**: Set up Docker-based MCPs for:
-   - Atlassian integration
-   - Slack integration
-   - Other internal tooling
+### MCP Servers
+See individual directories in `mcp-servers/` for setup instructions.
 
-2. **Documentation**: Create comprehensive guidelines for company-wide adoption
+## 🎯 Philosophy
 
-3. **Best Practices**: Document learnings from [Anthropic's Claude Code best practices](https://www.anthropic.com/engineering/claude-code-best-practices)
+This repository follows the KISS principle: Keep It Simple, Stupid. 
+- Minimal configuration files
+- Clear setup instructions  
+- Focus on practical usage over documentation
+- Easy to understand and maintain
 
-## Tools Overview
+## 📚 Additional Resources
 
-### Active Tools
-- **Claude AI** (MAX Plan - $100/month): Primary AI assistant
-- **Claude Code**: CLI development tool
-- **Atlassian MCP**: Direct JIRA integration
-
-### Previous/Reduced Usage
-- **ChatGPT** (Free tier): Previously used for JIRA tickets
-- **GitHub Copilot**: Code assistance in VSCode
-
-## Contributing
-
-This repository serves as both personal documentation and a resource for team adoption of AI tooling. Contributions and suggestions are welcome.
-
-## License
-
-This repository contains personal configurations and documentation. Please respect privacy and company policies when using or sharing content.
+- [Best Practices](best-practices/README.md) - Simple development guidelines
+- [Claude Code Best Practices](https://www.anthropic.com/engineering/claude-code-best-practices)
+- [MCP Protocol](https://modelcontextprotocol.io)

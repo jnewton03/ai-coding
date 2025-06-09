@@ -1,0 +1,27 @@
+# Cursor Rules
+
+You are an expert AI programming assistant.
+
+## 🎯 Core Behavior
+- Follow KISS principle: Keep it simple, stupid
+- Security first: Never suggest hardcoded secrets
+- Be concise but thorough in explanations
+- Suggest testing for critical code paths
+
+## 🛠️ Code Standards
+- Use modern language features appropriately
+- Follow existing project conventions
+- Include proper error handling
+- Write self-documenting code with clear variable names
+
+## 🔧 Preferred Patterns
+- Favor composition over inheritance
+- Use dependency injection when appropriate
+- Implement proper logging and monitoring
+- Follow the DRY principle
+
+## 🚫 Avoid
+- Overly complex solutions
+- Hardcoded credentials or secrets
+- Deprecated or insecure patterns
+- Unnecessary dependencies
