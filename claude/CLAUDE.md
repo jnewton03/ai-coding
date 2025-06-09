@@ -1,79 +1,26 @@
-# Claude Configuration
+# Jake's Claude Configuration
 
-This file contains instructions and configurations for Claude AI and Claude Code.
+## 🎯 Core Principles
+1. 🔒 Never commit sensitive data (secrets, API keys)
+2. 📋 Always plan first using TodoWrite before acting  
+3. 🔌 Use MCPs when available
+4. 🚫 Never commit to main/master without explicit permission
+5. 🚫 Don't add "committed by claude" footer to commits
+6. 🍺 Use homebrew to install CLI tools when needed
+7. 👨‍💻 You are a skilled software engineer, not just a code generator
+8. 🛡️ Security is top priority
+9. 🧩 Break complex problems into smaller testable parts with todo lists
+10. 💡 KISS: Keep it simple, stupid
+11. 🔄 DRY: Don't repeat yourself
 
-## General Instructions
+## 🛠️ Preferred Tools
+- Package management: homebrew
+- Git workflow: plan → implement → test → commit
+- Testing: Write tests first, fail fast
+- Documentation: Use emojis for visual scanning
 
-- Focus on clarity and conciseness in responses
-- Always verify before creating new files - prefer editing existing ones
-- Never create documentation files unless explicitly requested
-- Follow existing code conventions and patterns in the codebase
-
-## JIRA Ticket Template
-
-When creating JIRA tickets, use the following template:
-
+## 🔗 Usage
+To use this configuration:
+```bash
+ln -sf ~/Personal/coding/claude/CLAUDE.md ~/.claude/CLAUDE.md
 ```
-## Summary
-[One-line summary of the feature/bug/task]
-
-## Description
-[Detailed description of what needs to be done]
-
-## Acceptance Criteria
-- [ ] Criterion 1
-- [ ] Criterion 2
-- [ ] Criterion 3
-
-## Technical Notes
-[Any technical considerations or implementation details]
-
-## Dependencies
-[List any dependencies or blockers]
-```
-
-## Claude Code Best Practices
-
-### File Operations
-- Always use `Read` before `Edit` to understand context
-- Use `Glob` and `Grep` for efficient file searching
-- Batch multiple file reads for better performance
-
-### Task Management
-- Use TodoWrite/TodoRead tools for complex multi-step tasks
-- Mark tasks as in_progress when starting
-- Update task status immediately upon completion
-
-### Code Style
-- Match existing code conventions
-- Verify library availability before importing
-- Follow security best practices - never expose secrets
-
-### Git Operations
-- Only commit when explicitly requested
-- Use meaningful commit messages that explain the "why"
-- Include the Claude Code signature in commits
-
-## MCP Server Configuration
-
-### Atlassian MCP
-- Enables direct JIRA ticket creation
-- Configured for project: [PROJECT_KEY]
-- Default issue types: Story, Task, Bug
-
-### Future MCP Integrations
-- Slack: For notifications and status updates
-- Docker: Local development environments
-- Internal tools: Company-specific integrations
-
-## Slash Commands
-
-### Useful Commands
-- `/help` - Get help with Claude Code
-- `/model` - Check or change the current model
-- `/memory` - Manage conversation memory
-
-## References
-
-- [Claude Code Best Practices](https://www.anthropic.com/engineering/claude-code-best-practices)
-- [Claude Code Documentation](https://docs.anthropic.com/en/docs/claude-code)
