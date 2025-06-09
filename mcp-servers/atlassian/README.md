@@ -1,8 +1,26 @@
 # Atlassian MCP Server Configuration
 
-This MCP server enables direct integration with Atlassian products (JIRA, Confluence) from Claude AI.
+This directory documents the Atlassian MCP integration for Claude AI. The **recommended approach** is using Atlassian's official remote MCP server (beta).
 
-## Setup
+## 🚀 Recommended: Remote MCP Server (Beta)
+
+Atlassian provides an official remote MCP server that requires no local setup:
+
+### Setup Instructions
+1. Follow the official guide: [Using the Atlassian Remote MCP Server (beta)](https://community.atlassian.com/forums/Atlassian-Platform-articles/Using-the-Atlassian-Remote-MCP-Server-beta/ba-p/3005104)
+2. Configure in Claude Desktop settings
+3. No Docker or local installation required!
+
+### Benefits
+- ✅ Zero maintenance - Atlassian handles updates
+- ✅ No local resources needed
+- ✅ Official support from Atlassian
+- ✅ Automatic security updates
+- ✅ Direct API integration
+
+## 🔧 Alternative: Local MCP Server
+
+If you need custom modifications or prefer local control:
 
 1. **Environment Variables**
    ```bash
@@ -18,8 +36,7 @@ This MCP server enables direct integration with Atlassian products (JIRA, Conflu
    - Create new API token
    - Store securely in environment
 
-3. **Configure Claude Desktop**
-   Add to Claude Desktop settings:
+3. **Configure Claude Desktop (Local)**
    ```json
    {
      "mcpServers": {
@@ -34,6 +51,9 @@ This MCP server enables direct integration with Atlassian products (JIRA, Conflu
      }
    }
    ```
+
+4. **Docker Option**
+   See [Docker setup](../docker/README.md) for containerized deployment
 
 ## Usage Examples
 

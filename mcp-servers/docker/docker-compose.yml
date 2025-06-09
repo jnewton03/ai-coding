@@ -3,7 +3,7 @@ version: '3.8'
 services:
   # Atlassian MCP Server
   mcp-atlassian:
-    image: ghcr.io/modelcontextprotocol/server-atlassian:latest
+    image: mcp/atlassian:latest
     container_name: mcp-atlassian
     environment:
       - ATLASSIAN_API_TOKEN=${ATLASSIAN_API_TOKEN}

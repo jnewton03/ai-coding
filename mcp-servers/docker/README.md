@@ -23,10 +23,11 @@ This directory contains Docker configurations for running MCP servers locally.
 
 ## Available Services
 
-### Atlassian MCP (Active)
+### Atlassian MCP (Optional)
 - Port: 3001
-- Integrates with JIRA and Confluence
-- Requires API token from Atlassian
+- Local alternative to [Atlassian's remote MCP server](https://community.atlassian.com/forums/Atlassian-Platform-articles/Using-the-Atlassian-Remote-MCP-Server-beta/ba-p/3005104)
+- Use if you need custom modifications or prefer local control
+- **Note**: Remote MCP server is recommended for most users
 
 ### Slack MCP (Planned)
 - Port: 3002
