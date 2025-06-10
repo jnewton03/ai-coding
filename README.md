@@ -18,6 +18,7 @@ cp ~/path/to/repo/cursor/.cursorrules ./
 - **`cursor/`** - Cursor IDE rules and settings  
 - **`mcp-servers/`** - Model Context Protocol server configs
 - **`best-practices/`** - Simple development guidelines
+- **`TODO.md`** - Planned features and tools to explore
 
 ## 🔗 Tool-Specific Usage
 
